@@ -1,10 +1,16 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import {FiMenu} from "react-icons/fi"
+import { IoMdClose } from "react-icons/io";
 
 function SideBarBtn() {
+  const [swap,setSwap]=useState<boolean>(true)
   return (
-    <button className="btn btn-ghost">
-      <FiMenu size={25} />
+    <button
+      onClick={() => setSwap(!swap)}
+      className="btn btn-ghost swap swap-rotate">
+      <FiMenu className={`swap-${swap?"off":"on"}`} size={25} />
+      <IoMdClose className={`swap-${swap?"on":"off"}`} size={25} />
     </button>
   );
 }

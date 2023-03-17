@@ -1,5 +1,12 @@
 import './globals.css'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
+import localFont from "next/font/local";
+import SideBar from '@/components/SideBar';
+
+const myFont = localFont({
+  src: "./assets/fonts/Vazir.ttf",
+  display: "swap",
+});
 
 export const metadata = {
   title: "فروشگاه اینترنتی دیجیکالا",
@@ -14,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fa-IR" dir='rtl' className='font'>
+    <html lang="fa-IR" dir='rtl' className={myFont.className}>
       <body className='min-h-screen min-w-full'>
-        <Navbar/>
+        <Navbar />
         {children}
       </body>
     </html>
