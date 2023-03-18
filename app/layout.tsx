@@ -24,7 +24,9 @@ export default function RootLayout({
     <html lang="fa-IR" dir='rtl' className={myFont.className}>
       <body className='min-h-screen min-w-full'>
         <Navbar />
-        {children}
+        <div>
+          {children}
+        </div>
       </body>
     </html>
   )

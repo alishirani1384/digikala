@@ -3,7 +3,7 @@ import { BiSearch } from "react-icons/bi";
 
 function SearchInp() {
   return (
-    <div className="relative flex flex-1">
+    <div className="relative flex flex-1 lg:max-w-lg">
       <input
         type="text"
         placeholder="جستجو"
