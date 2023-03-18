@@ -1,7 +1,8 @@
 import './globals.css'
-import Navbar from '../components/Navbar';
+import Navbar from '@/components/Navbar';
 import localFont from "next/font/local";
 import SideBar from '@/components/SideBar';
+
 
 const myFont = localFont({
   src: "./assets/fonts/Vazir.ttf",
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="fa-IR" dir='rtl' className={myFont.className}>
       <body className='min-h-screen min-w-full'>
         <Navbar />
+        <SideBar/>
         <div>
           {children}
         </div>

@@ -1,16 +1,17 @@
 "use client"
-import React, { useState } from 'react';
+import { useSidebarStore } from '@/store/store';
+import React from 'react';
 import {FiMenu} from "react-icons/fi"
 import { IoMdClose } from "react-icons/io";
 
 function SideBarBtn() {
-  const [swap,setSwap]=useState<boolean>(true)
+  const openIt = useSidebarStore(state=>state.openIt);
+  
   return (
     <button
-      onClick={() => setSwap(!swap)}
+      onClick={openIt}
       className="btn lg:hidden btn-ghost swap swap-rotate">
-      <FiMenu className={`swap-${swap?"off":"on"}`} size={25} />
-      <IoMdClose className={`swap-${swap?"on":"off"}`} size={25} />
+      <FiMenu size={25} />
     </button>
   );
 }
