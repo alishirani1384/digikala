@@ -5,7 +5,7 @@ import { useSidebarStore } from "@/store/store";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Logo from "../app/assets/images/logo/digi.svg";
+import Logo from "../../assets/images/logo/digi.svg";
 import { shallow } from "zustand/shallow";
 
 function SideBar() {

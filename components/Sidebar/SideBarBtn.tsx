@@ -2,7 +2,6 @@
 import { useSidebarStore } from '@/store/store';
 import React from 'react';
 import {FiMenu} from "react-icons/fi"
-import { IoMdClose } from "react-icons/io";
 
 function SideBarBtn() {
   const openIt = useSidebarStore(state=>state.openIt);

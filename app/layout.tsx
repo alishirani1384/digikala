@@ -1,11 +1,11 @@
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 import localFont from "next/font/local";
-import SideBar from "@/components/SideBar";
-import Overlay from "@/components/Overlay";
+import SideBar from "@/components/Sidebar/SideBar";
+import Overlay from "@/components/Sidebar/Overlay";
 
 const myFont = localFont({
-  src: "./assets/fonts/Vazir.ttf",
+  src: "../assets/fonts/Vazir.ttf",
   display: "swap",
 });
 
