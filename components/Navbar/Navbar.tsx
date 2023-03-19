@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import SideBarBtn from "../Sidebar/SideBarBtn";
+import SideBarBtn from "./SideBarBtn";
 import Logo from "../../assets/images/logo/logo.svg";
 import { BsQuestionSquare } from "react-icons/bs";
 import Link from "next/link";
@@ -26,10 +26,11 @@ function Navbar() {
         <div className="flex w-full items-center justify-between my-3 gap-2">
           <SearchInp />
           <LoginBtn />
+          <div className="divider divider-horizontal hidden lg:flex"></div>
           <CartBtn />
         </div>
         <hr />
-        <CitySelector/>
+        <CitySelector />
         <hr />
       </div>
     </nav>

@@ -1,8 +1,10 @@
 import "./globals.css";
+import "keen-slider/keen-slider.min.css";
 import Navbar from "@/components/Navbar/Navbar";
 import localFont from "next/font/local";
 import SideBar from "@/components/Sidebar/SideBar";
 import Overlay from "@/components/Sidebar/Overlay";
+import NavLinks from "@/components/Navbar/NavLinks";
 
 const myFont = localFont({
   src: "../assets/fonts/Vazir.ttf",
@@ -23,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="fa-IR" dir="rtl" className={myFont.className}>
       <body className="min-h-screen min-w-full">
-        <Navbar />
+        <header className="flex flex-col">
+          <Navbar />
+          <NavLinks/>
+        </header>
         <SideBar />
         <Overlay />
         <div>{children}</div>
