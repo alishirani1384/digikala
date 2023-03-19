@@ -31,7 +31,7 @@ export default function RootLayout({
         </header>
         <SideBar />
         <Overlay />
-        <div>{children}</div>
+        <div className="w-full">{children}</div>
       </body>
     </html>
   );
