@@ -16,7 +16,7 @@ function LoginPage() {
         </small>
         <form className="flex flex-col w-full gap-5">
           <input
-            type="text"
+            type="tel"
             dir="auto"
             className="w-full p-3 rounded-lg border outline-none border-b-2 border-b-blue-600 bg-slate-200"
           />
