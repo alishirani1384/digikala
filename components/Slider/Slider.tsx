@@ -8,7 +8,8 @@ function Slider() {
 
   return (
     <Provider>
-      <Images/>
+      {/* @ts-expect-error Server Component */}
+      <Images />
     </Provider>
   );
 }
