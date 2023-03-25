@@ -4,13 +4,14 @@ import Image from 'next/dist/client/image';
 import React, { useRef, useState } from 'react'
 
 function Sanity() {
-  function handleChange(e) {
+  function handleChange(e:any) {
     const file = e.target.files[0];
     
-    client.assets.upload("file", file, {
+    client.assets.upload("image", file, {
       filename: file.name,
       contentType:file.type
-    }).then((data)=>console.log(data)
+    }).then(data=>console.log(data)
+    ).catch(err=>console.log(err)
     )
   }
   

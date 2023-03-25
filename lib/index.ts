@@ -5,7 +5,7 @@ export const client = createClient({
   projectId: "9jy19mp3",
   dataset: "production",
   token: process.env.NEXT_PUBLIC_SANITY_TOKEN,
-  apiVersion: "2023-03-25",
+  apiVersion: "2021-10-21",
   useCdn: false,
 });
 
