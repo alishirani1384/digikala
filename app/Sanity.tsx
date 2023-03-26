@@ -5,7 +5,8 @@ import Image from 'next/dist/client/image';
 import React, { useState } from 'react';
 
 function Sanity() {
- const [imageFile, setImageFile] = useState<null | File>(null);
+  const [imageFile, setImageFile] = useState<null | File>(null);
+  const [loading,setLoading]=useState<string>("")
 
  const handleUpload = async () => {
    if (imageFile) {
@@ -22,6 +23,7 @@ function Sanity() {
          },
        });
        console.log(`Image uploaded to ${uploadedImage.url}`);
+       setLoading(`Image uploaded to ${uploadedImage.url}`);
      } catch (error) {
        console.error("Failed to upload image", error);
      }
@@ -32,6 +34,9 @@ function Sanity() {
    <div>
      <input type="file" onChange={(e) => { if (!e.target.files) return; return setImageFile(e.target.files[0])}} />
      <button className='btn' onClick={handleUpload}>Upload</button>
+     {
+       loading && <p>{loading}</p>
+     }
    </div>
  );
 }
