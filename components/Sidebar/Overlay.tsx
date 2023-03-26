@@ -11,7 +11,7 @@ function Overlay() {
   return (
     <div
       onClick={closeIt}
-      className={`w-full lg:hidden md:w-full absolute top-0 left-0 bottom-0 bg-black  opacity-50 ${
+      className={`w-full z-40 lg:hidden md:w-full absolute top-0 left-0 bottom-0 bg-black  opacity-50 ${
         open ? "block" : "hidden"
       }`}></div>
   );

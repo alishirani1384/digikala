@@ -20,7 +20,7 @@ async function Images() {
           i: React.Key | null | undefined
         ) => (
           <Image
-            className="keen-slider__slide !h-72 object-cover lg:!h-full"
+            className="keen-slider__slide !h-64 object-cover lg:!h-full"
             src={builder.image(b.image.asset._ref).url()}
             width={2880}
             height={600}
