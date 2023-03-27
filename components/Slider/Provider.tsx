@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
+import Arrow from "./Arrow";
+import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 function Provider({ children }: { children: React.ReactNode }) {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -52,10 +54,19 @@ function Provider({ children }: { children: React.ReactNode }) {
   return isLoaded ? (
     <div className="keen-slider" ref={sliderRef}>
       {children}
+      <div className="absolute bottom-1/4 right-10 flex gap-4">
+        <Arrow
+          Icon={MdOutlineKeyboardArrowRight}
+          onClick={() => slider.current?.next()}
+        />
+        <Arrow
+          Icon={MdOutlineKeyboardArrowLeft}
+          onClick={() => slider.current?.prev()}
+        />
+      </div>
     </div>
   ) : (
-    <div className="h-64 w-full block bg-gray-300 animate-pulse">
-    </div>
+    <div className="h-64 w-full block bg-gray-300 animate-pulse"></div>
   );
 }
 
