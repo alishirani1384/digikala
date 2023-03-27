@@ -10,7 +10,7 @@ async function Images() {
         _ref
       }
     }
-  }`);
+  }`,{next:{revalidate:10}});
 
   return (
     <>
