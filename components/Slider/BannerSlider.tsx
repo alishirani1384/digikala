@@ -2,7 +2,7 @@ import Images from "./Images";
 import Provider from "./Provider";
 
 
-function Slider() {
+function BannerSlider() {
   
 
 
@@ -14,4 +14,4 @@ function Slider() {
   );
 }
 
-export default Slider
+export default BannerSlider
