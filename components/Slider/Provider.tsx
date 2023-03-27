@@ -3,14 +3,20 @@ import React, { useEffect, useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import Arrow from "./Arrow";
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import Dots from "./Dots";
 
 function Provider({ children }: { children: React.ReactNode }) {
   const [isLoaded, setIsLoaded] = useState(false)
+  const [index, setIndex] = useState<number>(0);
 
   const [sliderRef,slider] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,
-      
+      initial:0,
+      slideChanged(slider) {
+        setIndex(slider.track.details.rel);
+        
+      } 
     },
     [
       (slider) => {
@@ -54,7 +60,7 @@ function Provider({ children }: { children: React.ReactNode }) {
   return isLoaded ? (
     <div className="keen-slider" ref={sliderRef}>
       {children}
-      <div className="absolute bottom-1/4 right-10 flex gap-4">
+      <div className="absolute bottom-10 right-10 flex gap-4">
         <Arrow
           Icon={MdOutlineKeyboardArrowRight}
           onClick={() => slider.current?.next()}
@@ -64,6 +70,7 @@ function Provider({ children }: { children: React.ReactNode }) {
           onClick={() => slider.current?.prev()}
         />
       </div>
+      <Dots slider={slider} index={index} />
     </div>
   ) : (
     <div className="h-64 w-full block bg-gray-300 animate-pulse"></div>
