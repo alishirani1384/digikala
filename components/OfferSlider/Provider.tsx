@@ -3,20 +3,13 @@ import { useKeenSlider } from 'keen-slider/react';
 import React, { ReactNode } from 'react'
 
 function Provider({children}:{children:ReactNode}) {
-    const [sliderRef] = useKeenSlider<HTMLDivElement>({
-      breakpoints: {
-        "(min-width: 400px)": {
-          slides: { perView: 3, spacing: 5 },
-        },
-        "(min-width: 1000px)": {
-          slides: { perView: 6, spacing: 5 },
-        },
-        },
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+      
         rtl:true,
-      slides: { perView: 2 },
+      slides: { perView: "auto" , spacing: 5 },
     });
   return (
-      <div ref={sliderRef} className='keen-slider'>
+      <div ref={sliderRef} className='keen-slider min-h-full mr-6'>
           {children}
     </div>
   )

@@ -4,17 +4,20 @@ import React from 'react'
 async function Products() {
     const res = await fetch("https://fakestoreapi.com/products");
     const products = await res.json();
-    if(!products)return <div>loading ... </div>
     
   return (
       products.map((p:{image:string,price:string|number}, i: React.Key | null | undefined) => {
           return (
-              <div key={i} className='keen-slider__slide w-full h-52 flex flex-col justify-between p-4 bg-white rounded-lg'>
-                  <div className='w-40 h-40 rounded-lg'>
-                     <Image src={p.image} fill alt="product" className='rounded-lg object-contain'/> 
+              <div key={i} className="keen-slider__slide bg-white min-w-max min-h-full first:rounded-r-xl last:rounded-l-lg">
+                  <div className='flex flex-col min-h-full items-stretch min-w-full justify-between p-4 h-full'>
+                      <div className='flex items-center justify-center'>
+                          <Image src={p.image} width={130} height={130} alt="product"/>
+                      </div>
+                      <div>
+                          <b>{p.price}$</b>
+                      </div>
                   </div>
-                      <b className='text-lg'>{p.price}</b>
-            </div>
+              </div>
         )
     })
   )
