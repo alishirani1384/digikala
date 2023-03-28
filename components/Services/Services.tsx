@@ -18,7 +18,7 @@ _ref
 
   return (
     <div className="mx-auto my-6">
-      <div className="grid grid-cols-4 lg:flex lg:justify-between gap-6 place-items-center">
+      <div className="grid grid-cols-3 sm:grid-cols-4 lg:flex lg:justify-around gap-6 place-items-center">
         {services.map((s: { image: { asset: { _ref: SanityImageSource; }; }; text: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }, i: React.Key | null | undefined) => {
           return (
             <div

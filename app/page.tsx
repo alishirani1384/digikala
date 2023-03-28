@@ -1,5 +1,6 @@
 import Services from "@/components/Services/Services";
-import BannerSlider from "@/components/Slider/BannerSlider";
+import BannerSlider from "@/components/BannerSlider/BannerSlider";
+import OfferSlider from "@/components/OfferSlider/OfferSlider";
 
 
 
@@ -11,6 +12,7 @@ export default function Home() {
         {/* @ts-expect-error Server Component */}
         <Services />
       </div>
+      <OfferSlider/>
     </div>
   );
 }
