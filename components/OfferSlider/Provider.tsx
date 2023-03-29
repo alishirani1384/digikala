@@ -16,10 +16,11 @@ function Provider({ children }: { children: ReactNode }) {
     }
   }, [slider]);
   return (
-    isLoaded &&
-      <div ref={sliderRef} className='keen-slider min-h-full mr-6'>
+    <>
+    {isLoaded &&<div ref={sliderRef} className='keen-slider min-h-full mr-6'>
           {children}
-    </div>
+    </div>}
+    </>     
   )
 }
 
