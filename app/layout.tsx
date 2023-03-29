@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="fa-IR" dir="rtl" className={myFont.className}>
       <body className="min-h-screen min-w-full">
-        <header className="flex flex-col">
+        <header className="flex flex-col sticky top-0 z-40 bg-white">
           <Navbar />
           <NavLinks/>
         </header>

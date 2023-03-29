@@ -20,7 +20,7 @@ function Dots({ slider,index }: Props) {
     
     
   return (
-    <div className="absolute flex gap-2 bottom-2 left-1/2 -translate-x-1/2">
+    <div dir="ltr" className="absolute flex gap-2 bottom-2 left-1/2 -translate-x-1/2">
           {dots?.map((a,i) => {
               return <div key={i} className={`block rounded-full opacity-80 bg-gray-200 w-2 h-2` + (index == i ? " !bg-white w-4 !opacity-100":"")}></div>
       })}

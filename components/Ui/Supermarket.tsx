@@ -11,7 +11,7 @@ function Supermarket() {
                   <Image src={"/fresh.svg"} width={250} height={30} alt="text"/>
               </div>
               <button className='bg-white flex items-center gap-6 rounded-full p-3 text-green-600'>
-                 <p> بیش از 80 کالا </p>
+                 <p className='hidden md:block'> بیش از 80 کالا </p>
                   <HiArrowLeft color='green'/>
               </button>
           </div>

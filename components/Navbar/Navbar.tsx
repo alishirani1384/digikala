@@ -11,7 +11,7 @@ import CitySelector from "./CitySelector";
 
 function Navbar() {
   return (
-    <nav className="w-full sticky top-0">
+    <nav className="w-full">
       <div className="flex mx-auto xl:max-w-[1676px] w-full flex-col lg:flex-row px-4">
         <div className="flex lg:max-w-fit lg:pl-4 w-full items-center justify-between my-3">
           <SideBarBtn />
