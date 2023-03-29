@@ -8,6 +8,6 @@ interface SideBarState{
 
 export const useSidebarStore = create<SideBarState>()((set) => ({
     open: false,
-    openIt: () => set({ open: true }),
+    openIt: () => set({ open: true}),
     closeIt:()=>set({open:false})
 }))

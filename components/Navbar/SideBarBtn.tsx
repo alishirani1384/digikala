@@ -4,7 +4,7 @@ import React from 'react';
 import {FiMenu} from "react-icons/fi"
 
 function SideBarBtn() {
-  const openIt = useSidebarStore(state=>state.openIt);
+  const openIt = useSidebarStore(state => state.openIt);
   
   return (
     <button

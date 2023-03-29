@@ -15,7 +15,7 @@ function SideBar() {
   );
   return (
     <div
-      className={`bg-white z-50 lg:hidden w-2/3 md:w-1/2 transition-transform duration-500 absolute top-0 bottom-0 right-0 ${
+      className={`bg-white z-50 lg:hidden w-2/3 md:w-1/2 transition-transform duration-500 fixed top-0 bottom-0 right-0 ${
         open
           ? "translate-x-0"
           : "translate-x-full transition-transform duration-500"
