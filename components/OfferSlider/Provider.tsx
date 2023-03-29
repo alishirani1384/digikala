@@ -15,7 +15,8 @@ function Provider({ children }: { children: ReactNode }) {
       setIsLoaded(true);
     }
   }, [slider]);
-  return isLoaded && (
+  return (
+    isLoaded &&
       <div ref={sliderRef} className='keen-slider min-h-full mr-6'>
           {children}
     </div>
