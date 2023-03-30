@@ -2,6 +2,7 @@ import Services from "@/components/Services/Services";
 import BannerSlider from "@/components/BannerSlider/BannerSlider";
 import OfferSlider from "@/components/OfferSlider/OfferSlider";
 import Supermarket from "@/components/Ui/Supermarket";
+import Ads from "@/components/Ui/Ads";
 
 
 
@@ -15,7 +16,8 @@ export default function Home() {
       </div>
       <OfferSlider />
       <div className="container">
-        <Supermarket/>
+        <Supermarket />
+        <Ads/>
       </div>
     </div>
   );

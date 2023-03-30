@@ -4,7 +4,7 @@ import { HiArrowLeft } from "react-icons/hi";
 
 function Supermarket() {
   return (
-      <div className='bg-green-100 md:rounded-xl my-3'>
+      <div className='bg-green-100 md:rounded-xl my-6'>
           <div className='items-center justify-between flex px-10 py-8'>
               <div className='flex items-start flex-col md:flex-row md:items-center'>
                   <Image src={"/fresh.png"} width={66} height={66} alt="basket" />

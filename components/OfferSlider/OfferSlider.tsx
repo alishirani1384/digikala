@@ -5,7 +5,7 @@ import Provider from './Provider'
 
 function OfferSlider() {
   return (
-    <div className="w-full bg-red-500 my-4">
+    <div className="w-full bg-red-500">
       <div className="container mx-auto items-center flex lg:px-5 pr-5 py-5">
         <div className="flex flex-col items-center">
           <Image src={"/Amazings.svg"} width={80} height={80} alt="text" />
