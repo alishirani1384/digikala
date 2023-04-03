@@ -3,6 +3,7 @@ import BannerSlider from "@/components/BannerSlider/BannerSlider";
 import OfferSlider from "@/components/OfferSlider/OfferSlider";
 import Supermarket from "@/components/Ui/Supermarket";
 import Ads from "@/components/Ui/Ads";
+import Categories from "@/components/Ui/Categories";
 
 
 
@@ -17,7 +18,9 @@ export default function Home() {
       <OfferSlider />
       <div className="container">
         <Supermarket />
-        <Ads/>
+        <Ads />
+        {/* @ts-expect-error Server Component */}
+        <Categories />
       </div>
     </div>
   );
