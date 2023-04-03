@@ -1,8 +1,11 @@
 "use client";
 import { useKeenSlider } from "keen-slider/react";
 import React, { ReactNode, useEffect, useState } from "react";
-import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
-import Arrow from "../BannerSlider/Arrow";
+import {
+  MdOutlineKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
+import Arrow from "../Navbar/BannerSlider/Arrow";
 
 function Provider({ children }: { children: ReactNode }) {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
@@ -23,16 +26,16 @@ function Provider({ children }: { children: ReactNode }) {
           {children}
           <div className="absolute top-1/2 -translate-y-1/2 hidden lg:block">
             <Arrow
-            Icon={MdOutlineKeyboardArrowLeft}
-            onClick={() => slider.current?.next()}
-          />
-          </div> 
+              Icon={MdOutlineKeyboardArrowLeft}
+              onClick={() => slider.current?.next()}
+            />
+          </div>
           <div className="absolute top-1/2 -translate-y-1/2 right-0 hidden lg:block">
             <Arrow
-            Icon={MdOutlineKeyboardArrowRight}
-            onClick={() => slider.current?.prev()}
-          />
-          </div> 
+              Icon={MdOutlineKeyboardArrowRight}
+              onClick={() => slider.current?.prev()}
+            />
+          </div>
         </div>
       )}
     </>

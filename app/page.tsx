@@ -1,11 +1,9 @@
 import Services from "@/components/Services/Services";
-import BannerSlider from "@/components/BannerSlider/BannerSlider";
+import BannerSlider from "@/components/Navbar/BannerSlider/BannerSlider";
 import OfferSlider from "@/components/OfferSlider/OfferSlider";
 import Supermarket from "@/components/Ui/Supermarket";
 import Ads from "@/components/Ui/Ads";
 import Categories from "@/components/Ui/Categories";
-
-
 
 export default function Home() {
   return (

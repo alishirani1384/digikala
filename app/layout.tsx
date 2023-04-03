@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import SideBar from "@/components/Sidebar/SideBar";
 import Overlay from "@/components/Sidebar/Overlay";
 import NavLinks from "@/components/Navbar/NavLinks";
+import Footer from "@/components/Footer/Footer";
 
 const myFont = localFont({
   src: "../assets/fonts/Vazir.ttf",
@@ -23,15 +24,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fa-IR" dir="rtl" className={myFont.className}>
+    <html lang="fa-IR" dir="rtl" className={myFont.className+ ` scroll-smooth`}>
       <body className="min-h-screen min-w-full">
         <header className="flex flex-col">
           <Navbar />
-          <NavLinks/>
+          <NavLinks />
         </header>
         <SideBar />
         <Overlay />
         <div className="w-full">{children}</div>
+        <Footer />
       </body>
     </html>
   );
