@@ -24,7 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fa-IR" dir="rtl" className={myFont.className+ ` scroll-smooth`}>
+    <html
+      lang="fa-IR"
+      dir="rtl"
+      className={myFont.className + ` scroll-smooth`}>
       <body className="min-h-screen min-w-full">
         <header className="flex flex-col">
           <Navbar />
