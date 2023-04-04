@@ -1,10 +1,12 @@
 import { builder, client } from '@/lib';
+import Link from 'next/dist/client/link';
 import Image from 'next/image';
 import React from 'react'
 
 async function Products() {
     const products = await client.fetch(`*[_type == "product"]{
 title,
+_id,
   price,
   discount,
   image{
@@ -15,9 +17,9 @@ _ref
 }`);
     
   return (
-      products.map((p:{image:{asset:{_ref:string}},price:string|number,discount:number}, i: React.Key | null | undefined) => {
+      products.map((p:{image:{asset:{_ref:string}},_id:string,price:string|number,discount:number}, i: React.Key | null | undefined) => {
           return (
-            <div
+            <Link href={`/product/${p._id}`}
               key={i}
               className="keen-slider__slide bg-white max-w-full min-w-min min-h-full first:rounded-r-xl last:rounded-l-lg">
               <div className="flex flex-col min-h-full items-stretch min-w-full justify-between p-4 h-full">
@@ -39,7 +41,7 @@ _ref
                   </b>
                 </div>
               </div>
-            </div>
+            </Link>
           );
     })
   )

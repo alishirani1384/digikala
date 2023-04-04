@@ -28,7 +28,7 @@ export default function RootLayout({
       lang="fa-IR"
       dir="rtl"
       className={myFont.className + ` scroll-smooth`}>
-      <body className="min-h-screen min-w-full">
+      <body className="min-h-screen min-w-full flex flex-col">
         <header className="flex flex-col">
           <Navbar />
           <NavLinks />
@@ -36,7 +36,7 @@ export default function RootLayout({
         <SideBar />
         <Overlay />
         <div className="w-full">{children}</div>
-        <Footer />
+          <Footer />
       </body>
     </html>
   );
