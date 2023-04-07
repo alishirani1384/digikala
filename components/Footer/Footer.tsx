@@ -50,6 +50,7 @@ function Footer() {
             Ali Shirani
           </a>
         </p>
+        
       </div>
     </footer>
   );
